@@ -3,11 +3,11 @@ osx_image: xcode61
 rvm:
 - 2.1.2
 install:
-- chmod a+x ./Test/install.sh
-- ./Test/install.sh
+- chmod a+x ./install.sh
+- ./install.sh
 script:
-- chmod a+x ./Test/build.sh
-- ./Test/build.sh
+- chmod a+x ./build.sh
+- ./build.sh
 deploy:
   provider: s3
   access_key_id: pyeongguk.lee
@@ -15,7 +15,6 @@ deploy:
     secure: huuEjkoFLDQCyfkyisi6C4eMelymHfacubz1ZELT3qE4aCM56kGm7ViBaG1pczkzBjCvPmYmmzXnVTANsb/MK5rOCWK87f408fauJF4OsCxYGIHzqzsQCB4rNVBI6B7KrAa6obqPodSH2pg5GPh6W0gc8QZI4CfDrAaqE13sTS9TZa55e8MMSHnLgD2f1LMe/tA3BPpC7LR6oTFXIIMuxksfHXMgjjRn7UyksbDMW8PnMsjB0BcFj61fCXvUuaMdRlrmHzMV/fuyanT4QG2JJNsZ+35GwkLP9INYgVCRMtbC8+F6fR9c+B5Umi+YnVuEbgSYBbpAUUKQKo8PuZ5OnaXe8BaKHcb7/SpkO2Rbr0FaTlbMP89oFOacT35QyknJ6ETn/JBn7PP1datcUCO1riLIZidO55aV3stGB2ysgCxmCMj7x8clnnDn3x0qmAPqystVdIUoZVPSCfgi9R2Ze1bGEcFBL1IrMhIPy5hI5toXBZKx8sptxFbT0rByx6Imd54Y1t3V0aE7/SXQ/PZMFkOw2U/u+cdwXIREnJNnD1luhJ77kbwOEm47Rr9/HBGAufs1hkbO7BeP9ZsXGMGju2AFjr702Wk6VdomzRti4h8k6vargPcmpgQzHJOUAFHy0jOtkPvv7wF7Top5gvCR4rGHJiFhiJb71hae6mbIVUg=
   bucket: test-travis-ci
   local-dir: Build
-  upload-dir: ci-build
   skip_cleanup: true
   acl: public_read
   on:

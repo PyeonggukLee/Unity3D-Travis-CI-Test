@@ -5,8 +5,8 @@ osx_image: xcode61
 rvm:
 - 2.1.2
 install:
-- chmod a+x ./install.sh
-- ./install.sh
+- chmod a+x ./Test/install.sh
+- ./Test/install.sh
 script:
-- chmod a+x ./build.sh
-- ./build.sh
+- chmod a+x ./Test/build.sh
+- ./Test/build.sh
